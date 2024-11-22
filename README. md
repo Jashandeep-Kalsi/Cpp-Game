@@ -1,0 +1,78 @@
+# Dungeon Adventure Game
+
+A simple, text-based adventure game built in C++ where players navigate through a dungeon, face challenges, and try to escape alive! Perfect for beginners learning C++ programming.
+
+## Features
+
+- **Interactive Storyline**: Make choices to progress through the game.
+- **Inventory System**: Collect items like keys and treasures.
+- **Combat System**: Fight enemies in turn-based battles.
+- **Save and Load**: Save your progress and resume later.
+- **Randomized Events**: Adds unpredictability to your adventure.
+
+## Gameplay
+
+You wake up in a dark dungeon and must navigate through rooms filled with challenges. Each room presents different options, including:
+- Picking up items
+- Solving puzzles
+- Fighting enemies
+
+Your goal is to escape the dungeon while managing your health and inventory.
+
+### Example
+
+```text
+Welcome to the Dungeon Adventure!
+Your Health: 100
+
+You enter Room 1.
+You see a locked door and a table with a key on it.
+1. Pick up the key.
+2. Leave the room.
+
+Enter your choice: 1
+You picked up a key!
+
+Installation
+
+1. Clone the repository:
+
+git clone https://github.com/YourUsername/DungeonAdventure.git
+
+
+2. Navigate to the project directory:
+
+cd DungeonAdventure
+
+
+3. Compile the code using a C++ compiler (e.g., g++):
+
+g++ dungeon_game.cpp -o dungeon_game
+
+
+4. Run the game:
+
+./dungeon_game
+
+
+
+How to Play
+
+1. Run the program in your terminal.
+
+
+2. Follow the prompts to navigate through the dungeon.
+
+
+3. Make choices to fight enemies, collect items, and progress through the game.
+
+
+4. Use the save/load feature to resume your game later.
+
+
+
+Requirements
+
+A C++ compiler (e.g., GCC, Clang, or MSVC)
+
+Terminal or command prompt for running the program
