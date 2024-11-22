@@ -12,7 +12,17 @@ vector<string> inventory;
 int health = 100;
 
 // Functions Declarations
-void displayInventory();
+void displayInventory() {
+    cout << "Your Inventory: ";
+    if (inventory.empty()) {
+        cout << "empty\n";
+    } else {
+        for (const string& item : inventory) {
+            cout << item << " ";
+        }
+        cout << endl;
+    }
+}
 void saveGame()
 {
     ofstream file("savegame.txt");
