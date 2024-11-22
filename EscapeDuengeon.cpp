@@ -42,6 +42,47 @@ void saveGame()
     }
 }
 
+
+void combat()
+{
+    int enemyHealth = 50;
+
+    while (enemyHealth > 0 && health > 0)
+    {
+        cout << "Your Health: " << health << ", Enemy Health: " << enemyHealth << endl;
+        cout << "1. Attack\n";
+        cout << "2. Defend\n";
+        int choice;
+        cin >> choice;
+
+        int playerDamage = rand() % 15 + 5; // Random damage between 5 and 20
+        int enemyDamage = rand() % 15 + 5;
+
+        if (choice == 1)
+        {
+            enemyHealth -= playerDamage;
+            cout << "You attack the enemy for " << playerDamage << " damage!\n";
+        }
+        else
+        {
+            enemyDamage /= 2;
+            cout << "You defend yourself, reducing damage!\n";
+        }
+
+        health -= enemyDamage;
+        cout << "The enemy attacks you for " << enemyDamage << " damage!\n";
+    }
+
+    if (health <= 0)
+    {
+        cout << "You were defeated by the enemy!\n";
+    }
+    else
+    {
+        cout << "You defeated the enemy!\n";
+    }
+}
+
 void loadGame()
 {
     ifstream file("savegame.txt");
@@ -110,45 +151,6 @@ void navigateRoom(int roomNumber)
     }
 }
 
-void combat()
-{
-    int enemyHealth = 50;
-
-    while (enemyHealth > 0 && health > 0)
-    {
-        cout << "Your Health: " << health << ", Enemy Health: " << enemyHealth << endl;
-        cout << "1. Attack\n";
-        cout << "2. Defend\n";
-        int choice;
-        cin >> choice;
-
-        int playerDamage = rand() % 15 + 5; // Random damage between 5 and 20
-        int enemyDamage = rand() % 15 + 5;
-
-        if (choice == 1)
-        {
-            enemyHealth -= playerDamage;
-            cout << "You attack the enemy for " << playerDamage << " damage!\n";
-        }
-        else
-        {
-            enemyDamage /= 2;
-            cout << "You defend yourself, reducing damage!\n";
-        }
-
-        health -= enemyDamage;
-        cout << "The enemy attacks you for " << enemyDamage << " damage!\n";
-    }
-
-    if (health <= 0)
-    {
-        cout << "You were defeated by the enemy!\n";
-    }
-    else
-    {
-        cout << "You defeated the enemy!\n";
-    }
-}
 
 int main()
 {
